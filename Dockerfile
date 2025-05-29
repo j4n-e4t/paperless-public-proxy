@@ -12,9 +12,8 @@ FROM scratch
 
 COPY --from=builder /app/main /app/main
 
-ENV PAPERLESS_BASE_URL=http://paperless:8000/share/
-ENV PROXY_URL=http://localhost:8080
-
-EXPOSE 8080
+ENV PAPERLESS_BASE_URL=http://paperless:8000/
+ENV TS_HOSTNAME=paperless-public-proxy
+ENV TS_AUTHKEY=your-key
 
 CMD [ "/app/main" ]
