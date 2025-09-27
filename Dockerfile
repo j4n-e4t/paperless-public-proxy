@@ -21,5 +21,6 @@ COPY --from=builder /app/main /app/main
 ENV PAPERLESS_BASE_URL=http://paperless:8000/
 ENV TS_HOSTNAME=paperless-public-proxy
 ENV TS_AUTHKEY=your-key
+ENV TS_DIR=/app/tsnet-data
 
 CMD [ "/app/main" ]

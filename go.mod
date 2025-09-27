@@ -2,7 +2,7 @@ module github.com/j4n-e4t/paperless-public-proxy
 
 go 1.25.1
 
-require tailscale.com v1.88.2
+require tailscale.com v1.88.3
 
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
