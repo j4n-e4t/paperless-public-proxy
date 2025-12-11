@@ -19,8 +19,6 @@ COPY --from=certs /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=builder /app/main /app/main
 
 ENV PAPERLESS_BASE_URL=http://paperless:8000/
-ENV TS_HOSTNAME=paperless-public-proxy
-ENV TS_AUTHKEY=your-key
-ENV TS_DIR=/app/tsnet-data
+ENV PORT=:7070
 
 CMD [ "/app/main" ]

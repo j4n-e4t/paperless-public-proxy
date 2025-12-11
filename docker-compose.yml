@@ -1,11 +1,9 @@
 services:
   paperless-public-proxy:
     image: ghcr.io/j4n-e4t/paperless-public-proxy:latest
+    ports:
+      - "7070:7070"
     environment:
       - PAPERLESS_BASE_URL=https://paperless.example.com/
-      - TS_HOSTNAME=paperless-share
-      - TS_AUTHKEY=your-key
-      - TS_DIR=/app/tsnet-data
-    volumes:
-      - ./tsnet-data:/app/tsnet-data
+      - PORT=:7070
     restart: unless-stopped
